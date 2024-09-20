@@ -1,94 +1,76 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// pages/index.js
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './/page.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className={styles.container}>
+      <Head>
+        <title>SHC Robotics</title>
+        <meta name="description" content="SHC Robotics team page" />
+        <link
+  rel="icon"
+  href="/gear.svg"
+  type="image/svg+xml"
+  sizes="any"
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </Head>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
+      <header className={styles.header}>
+        <div className={styles.leftSide}>
+        <div className={styles.headerText}>
+          <p>SHACSHUCA ROBOTICS</p>
+        </div>
+        <nav className={styles.nav}>
+          <a href="#">Ana Sayfa</a>
+          <a href="#">Takım</a>
+          <a href="#">Projeler</a>
+          <a href="#">Dergi</a>
+        </nav>
+        <div className={styles.gearContainer}>
+          <Image 
+            src="/logo.svg"
+            alt="Logo Gear"
+            width={156}  
+            height={156}
+            className={styles.gearVector}
+          />
+        </div>
+        </div>
+        <div className={styles.contact}>
+          <a href="#">Contact</a>
+          <a href="#">
+            <Image src="https://placehold.co/24" alt="English" width={24} height={24} />
           </a>
         </div>
+      </header>
+
+      <main className={styles.main}>
+        <section className={styles.intro}>
+          <div className={styles.introContainer}>
+          <div className={styles.introTextContainer}>
+            <Image src="https://placehold.co/20" alt="Robot" width={20} height={20} />
+            <h1>SHC ROBOTICS</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur...</p>
+          </div>
+          <Image src="https://placehold.co/400" alt="Robot" width={400} height={400} />
+        </section>
+
+        <section className={styles.values}>
+          <h2>DEĞERLERİMİZ</h2>
+          <div className={styles.valueGrid}>
+            <Image src="https://placehold.co/200" alt="Value 1" width={200} height={200} />
+            <Image src="https://placehold.co/200" alt="Value 2" width={200} height={200} />
+            <Image src="https://placehold.co/200" alt="Value 3" width={200} height={200} />
+            <Image src="https://placehold.co/200" alt="Value 4" width={200} height={200} />
+          </div>
+        </section>
       </main>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <p>© SHC Robotics - 2024</p>
       </footer>
     </div>
   );
